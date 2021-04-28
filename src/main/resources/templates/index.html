@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+    <ul class="nav navbar-nav " >
+    <li><a th:href="@{/}">Profile</a></li>
+    <li><a th:href="@{/userdata}">UserInfo</a></li>
+    </ul>
+    </div>
+    <div class="container">
+    <form method="post">
+
+        <!--Name-->
+        <label>Name</label>
+        <span style="color: red;" th:if="${nameInvalid}">Username Invalid.</span>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <!--age-->
+        <label>Age</label>
+        <span style="color: red;" th:if="${ageInvalid}">Username Invalid.</span>
+        <input type="text" name="age" id="age" required>
+        <br>
+        <!--email-->
+        <label>Email</label>
+        <span style="color: red;" th:if="${emailInvalid}">Username Invalid.</span>
+        <input type="text" name="email" id="email" required>
+        <br>
+        <!--Address-->
+        <label>Address</label>
+        <span style="color: red;" th:if="${addressInvalid}">Username Invalid.</span>
+        <input type="text" name="address" id="address" required>
+        <br>
+        <!--Phone Num-->
+        <label>Phone Number</label>
+        <span style="color: red;" th:if="${phoneInvalid}">Username Invalid.</span>
+        <input type="text" name="phoneNumber" id="phoneNumber" required>
+        <br>
+
+
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+
+</body>
+</html>
+<!--
+as Name,Age,Email Id,Address and phone number.-->
+
